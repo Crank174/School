@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="catalog" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TeacherSceneController">
+   <children>
+      <TabPane layoutX="100.0" layoutY="22.0" prefHeight="200.0" prefWidth="200.0" styleClass="column-header-background" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <tabs>
+          <Tab style="-fx-background-color: #6DCAE2#6DCAE2;" text="Русский язык">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6404682274247492" layoutY="7.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="335.0" prefWidth="340.0">
+                                 <children>
+                                    <TableView fx:id="rusTable" layoutX="-26.0" layoutY="14.0" prefHeight="335.0" prefWidth="381.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="rusName" prefWidth="200.0" text="Имя" />
+                                        <TableColumn fx:id="rusLastName" prefWidth="180.0" text="Фамилия" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="424.0" styleClass="catalog">
+                                 <children>
+                                    <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.rightAnchor="70.0" />
+                                    <Label fx:id="rusSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.rightAnchor="20.0" />
+                                    <Button fx:id="addMarkRus" layoutX="52.0" layoutY="312.0" mnemonicParsing="false" onAction="#addMarkRus" text="Добавить оценку" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="46.0" />
+                                    <Button fx:id="buttonMarks" layoutX="34.0" layoutY="129.0" mnemonicParsing="false" onAction="#openTableMarksRus" text="Таблица успеваемости" AnchorPane.bottomAnchor="183.0" AnchorPane.rightAnchor="34.0" />
+                                    <Button layoutX="46.0" layoutY="213.0" mnemonicParsing="false" onAction="#addPropuskRus" text="Добавить пропуск" />
+                                    <Button layoutX="32.0" layoutY="178.0" mnemonicParsing="false" onAction="#openPropuskRus" text="Таблица посещаемости" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #6DCAE2;" text="Математика">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6254180602006689" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="335.0" prefWidth="130.0">
+                                 <children>
+                                    <TableView fx:id="mathTable" layoutX="-26.0" layoutY="14.0" prefHeight="200.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="mathName" prefWidth="184.0" text="Имя" />
+                                          <TableColumn fx:id="mathLastName" prefWidth="184.0" text="Фамилия" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="341.0" styleClass="catalog">
+                                 <children>
+                                    <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.rightAnchor="70.0" />
+                                    <Label fx:id="mathSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.rightAnchor="20.0" />
+                                    <Button fx:id="addMarkMath" layoutX="56.0" layoutY="312.0" mnemonicParsing="false" onAction="#addMarkMath" text="Добавить оценку" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="51.0" />
+                                    <Button fx:id="buttonMarks1" layoutX="40.0" layoutY="129.0" mnemonicParsing="false" onAction="#openTableMarksMath" text="Таблица успеваемости" AnchorPane.bottomAnchor="183.0" AnchorPane.rightAnchor="37.0" />
+                                    <Button layoutX="52.0" layoutY="214.0" mnemonicParsing="false" onAction="#addPropuskMath" text="Добавить пропуск" />
+                                    <Button layoutX="38.0" layoutY="177.0" mnemonicParsing="false" onAction="#openPropuskMath" text="Таблица посещаемости" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #6DCAE2#6DCAE2;" text="Физика">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.637123745819398" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="206.0">
+                                 <children>
+                                    <TableView fx:id="physTable" layoutX="-26.0" layoutY="14.0" prefHeight="200.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="physName" prefWidth="187.0" text="Имя" />
+                                          <TableColumn fx:id="physLastName" prefWidth="189.0" text="Фамилия" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="341.0" styleClass="catalog">
+                                 <children>
+                                    <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.rightAnchor="70.0" />
+                                    <Label fx:id="physSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.rightAnchor="20.0" />
+                                    <Button fx:id="addMarkPhys" layoutX="48.0" layoutY="312.0" mnemonicParsing="false" onAction="#addMarkPhys" text="Добавить оценку" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="52.0" />
+                                    <Button fx:id="buttonMarks2" layoutX="33.0" layoutY="131.0" mnemonicParsing="false" onAction="#openTableMarksPhys" text="Таблица успеваемости" AnchorPane.bottomAnchor="181.0" AnchorPane.rightAnchor="37.0" />
+                                    <Button layoutX="45.0" layoutY="215.0" mnemonicParsing="false" onAction="#addPropuskPhys" text="Добавить пропуск" />
+                                    <Button layoutX="31.0" layoutY="179.0" mnemonicParsing="false" onAction="#openPropuskPhys" text="Таблица посещаемости" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #6DCAE2#6DCAE2;" text="Информатика">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6220735785953178" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="206.0">
+                                 <children>
+                                    <TableView fx:id="infTable" layoutX="-26.0" layoutY="14.0" prefHeight="200.0" prefWidth="218.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn fx:id="infName" prefWidth="173.0" text="Имя" />
+                                          <TableColumn fx:id="infLastName" prefWidth="193.0" text="Фамилия" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="341.0" styleClass="catalog" stylesheets="@style.css">
+                                 <children>
+                                    <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.rightAnchor="70.0" />
+                                    <Label fx:id="infSrLabel" layoutX="368.0" layoutY="14.0" />
+                                    <Button fx:id="addMarkInf" layoutX="58.0" layoutY="312.0" mnemonicParsing="false" onAction="#addMarkInf" text="Добавить оценку" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="51.0" />
+                                    <Button fx:id="buttonMarks21" layoutX="43.0" layoutY="135.0" mnemonicParsing="false" onAction="#openTableMarksInf" text="Таблица успеваемости" AnchorPane.bottomAnchor="177.0" AnchorPane.rightAnchor="36.0" />
+                                    <Button layoutX="52.0" layoutY="223.0" mnemonicParsing="false" onAction="#addPropuskInf" text="Добавить пропуск" />
+                                    <Button layoutX="40.0" layoutY="186.0" mnemonicParsing="false" onAction="#openPropuskInf" text="Таблица посещаемости" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="nameLabel" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

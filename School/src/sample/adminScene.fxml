@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminSceneController">
+   <children>
+      <TabPane layoutY="7.0" prefHeight="200.0" prefWidth="200.0" styleClass="catalog" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Ученики">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="catalog" stylesheets="@style.css">
+                     <children>
+                        <TableView fx:id="childTable" layoutY="7.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@style.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="childLoginColumn" prefWidth="75.0" text="Логин" />
+                            <TableColumn fx:id="childPassColumn" prefWidth="75.0" text="Пароль" />
+                              <TableColumn fx:id="childNameColumn" prefWidth="75.0" text="Имя" />
+                              <TableColumn fx:id="childLastNameColumn" prefWidth="75.0" text="Фамилия" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="addChildButton" layoutX="55.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleNewChild" text="Добавить пользователя" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" />
+                        <Button fx:id="deleteChildButton" layoutX="365.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleDeleteChild" text="Удалить пользователя" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Учителя">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="teacherTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="teacherLoginColumn" prefWidth="75.0" text="Логин" />
+                              <TableColumn fx:id="teacherPassColumn" prefWidth="75.0" text="Пароль" />
+                              <TableColumn fx:id="teacherNameColumn" prefWidth="75.0" text="Имя" />
+                              <TableColumn fx:id="teacherLastNameColumn" prefWidth="75.0" text="Фамилия" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="addTeacherButton" layoutX="113.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleNewTeacher" text="Добавить пользователя" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" />
+                        <Button fx:id="deleteTeacherButton" layoutX="395.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleDeleteTeacher" text="Удалить пользователя" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

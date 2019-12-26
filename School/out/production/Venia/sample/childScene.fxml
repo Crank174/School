@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="396.0" styleClass="catalog" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChildSceneController">
+    <children>
+        <TabPane layoutX="100.0" layoutY="22.0" prefHeight="370.0" prefWidth="395.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+            <tabs>
+                <Tab text="Русский язык">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="482.0">
+                     <children>
+                        <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+                        <Label fx:id="rusSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="30.0" />
+                        <Button fx:id="showMarksRus" layoutX="20.0" layoutY="103.0" mnemonicParsing="false" onAction="#openTableMarksRus" text="Показать мою успеваемость" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="20.0" layoutY="228.0" mnemonicParsing="false" onAction="#openPropuskRus" text="Показать посещаемость" />
+                     </children>
+                  </AnchorPane>
+               </content>
+                </Tab>
+                <Tab text="Математика">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="482.0">
+                     <children>
+                        <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+                        <Label fx:id="mathSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="30.0" />
+                        <Button fx:id="showMarksMath" layoutX="20.0" layoutY="103.0" mnemonicParsing="false" onAction="#openTableMarksMath" text="Показать мою успеваемость" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="22.0" layoutY="231.0" mnemonicParsing="false" onAction="#openPropuskMath" text="Показать посещаемость" />
+                     </children>
+                  </AnchorPane>
+               </content>
+                </Tab>
+                <Tab text="Физика">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="482.0">
+                     <children>
+                        <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+                        <Label fx:id="physSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="30.0" />
+                        <Button fx:id="showMarksPhys" layoutX="20.0" layoutY="103.0" mnemonicParsing="false" onAction="#openTableMarksPhys" text="Показать мою успеваемость" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="22.0" layoutY="232.0" mnemonicParsing="false" onAction="#openPropuskPhys" text="Показать посещаемость" />
+                     </children>
+                  </AnchorPane>
+               </content>
+                </Tab>
+                <Tab text="Информатика">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="482.0" styleClass="catalog" stylesheets="@style.css">
+                     <children>
+                        <Label layoutX="191.0" layoutY="14.0" text="Средний балл" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+                        <Label fx:id="infSrLabel" layoutX="368.0" layoutY="14.0" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="30.0" />
+                        <Button fx:id="showMarksInf" layoutX="20.0" layoutY="103.0" mnemonicParsing="false" onAction="#openTableMarksInf" text="Показать мою успеваемость" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" />
+                        <Button layoutX="22.0" layoutY="230.0" mnemonicParsing="false" onAction="#openPropuskInf" text="Показать посещаемость" />
+                     </children>
+                  </AnchorPane>
+               </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+      <Label fx:id="nameLabel" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="10.0" />
+    </children>
+</AnchorPane>
